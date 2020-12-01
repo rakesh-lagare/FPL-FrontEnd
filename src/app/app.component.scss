@@ -1,0 +1,152 @@
+.p-grid {
+  height: 99vh;
+  background-color: white;
+  overflow: hidden;
+}
+
+.active-team,
+.bench {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  background-color: white;
+  grid-template-rows: auto;
+  grid-gap: 10px;
+
+  ::ng-deep .p-component {
+    box-sizing: border-box;
+    height: 8rem;
+    width: 100%;
+  }
+}
+
+.active-team {
+  padding: 10px;
+  //background-image: url("https://media.istockphoto.com/photos/striped-soccer-field-picture-id472347896?k=6&m=472347896&s=612x612&w=0&h=qisqHqB96tr0MMIJGD1jfQyeUvM8Xw5ybbhDRdyNyWE=");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 70%;
+  background: lightgrey;
+  border-radius: 3px;
+  margin-bottom: 10px;
+}
+
+.bench {
+  height: 20%;
+  background-color: teal;
+  padding: 5px;
+}
+
+.team-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+  overflow-y: auto;
+  height: 100%;
+}
+
+.divider {
+  height: 8px;
+  border-radius: 5px;
+  background: #8360c3;
+  background: -webkit-linear-gradient(to right, #2ebf91, #8360c3);
+  background: linear-gradient(to right, #2ebf91, #8360c3);
+}
+
+.player-card {
+  display: flex;
+  height: 100%;
+  width: 100%;
+
+  ::ng-deep .p-card-content {
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+
+  ::ng-deep .p-card-body {
+    padding: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &_captain {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    background-color: black;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    text-align: center;
+    font-weight: 500;
+    font-size: 10px;
+    color: white;
+    display: table;
+  }
+
+  &_image {
+    background-image: url("https://cdn.wtfoot.com/wp-content/uploads/2019/01/rashford_pic-e1548769398399.png");
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 60%;
+    width: 100%;
+  }
+
+  &_team {
+    height: 20%;
+    width: 100%;
+    text-align: center;
+    background: aliceblue;
+    font-weight: 500;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+
+    i {
+      margin: 0 8px 0 -10px;
+      color: #b8860b;
+    }
+  }
+
+  &_points {
+    height: 20%;
+    width: 100%;
+    text-align: center;
+    background: turquoise;
+    font-weight: 500;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+  }
+}
+
+.team-name {
+  height: 5%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+  border-radius: 3px;
+  justify-content: space-between;
+  color: white;
+  background: #ff416c;
+  background: -webkit-linear-gradient(to right, #ff4b2b, #ff416c);
+  background: linear-gradient(to right, #ff4b2b, #ff416c);
+  font-weight: 500;
+  font-family: cursive;
+  margin-bottom: 10px;
+}
